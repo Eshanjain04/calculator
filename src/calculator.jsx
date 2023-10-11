@@ -6,19 +6,16 @@ const Calculator = () => {
     const[displayed , setdisplayed] = useState(false);
     var handleClick = (e)=>{
         if(e.target.value==="="){
-            var ans = eval(str);
+            // eslint-disable-next-line
+            var ans = eval(str); 
             setStr(ans);
             setdisplayed(true);
         }
         else{
             if(displayed===true){
-                setStr(e.target.value);
                 setdisplayed(false);
             }
-            else{
-                setStr(str+e.target.value);
-            }
-            
+            setStr(str+e.target.value);
         }
         
     }
